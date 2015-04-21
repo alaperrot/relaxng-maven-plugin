@@ -1,0 +1,9 @@
+default namespace = "http://alaperrot.info/foo"
+
+grammar {
+    start = Foo
+    Foo = element foo {
+        attribute fu {text},
+        text
+    }
+}

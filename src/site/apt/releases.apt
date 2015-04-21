@@ -1,5 +1,11 @@
 Release Notes
 
+* Release 2.0 (2015-04-21)
+
+    * fork of {{{https://github.com/bryonjacob/relaxng-maven-plugin}Bryon Jacob plugin}}
+
+    * conversion to XSD (XML Schema) only, no more RNC to RNG or RNG to RNC
+
 * Release 1.2 (2011-01-02)
 
     * added unit tests

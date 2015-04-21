@@ -1,0 +1,35 @@
+Getting Started
+
+  This plugin manipulates Relax NG schemas during your Maven build.  It uses
+  {{{http://www.thaiopensource.com/relaxng/trang.html}Trang}} to translate between .rng (Relax
+  NG XML format), .rnc (Relax NG Compact format) and .xsd (XML Schema) based schemas.
+
+  The most basic usage of the plugin is to simply wire it into your POM and run the
+  <<translate>> goal:
+
++------
+    <plugins>
+        <plugin>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>${project.artifactId}</artifactId>
+            <version>${project.version}</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>translate</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+        ...
+    </plugins>
++------
+
+  By default all *.rng and *.rnc files in <<<src/main/rng>>> are translated with Trang into
+  the an XSD: <<<src/main/rng/foo.rnc>>> will be translated into
+  <<<target/generated-sources/xsd/foo.xsd>>>. Read the full documentation on
+  {{{./translate-mojo.html}generate-sources:translate}} for all available options.
+
+======
+
+  <${project.artifactId} is licensed under the {{{./license.html}New BSD License}}.>

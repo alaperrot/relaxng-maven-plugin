@@ -1,0 +1,34 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>info.alaperrot.maven</groupId>
+	<artifactId>defaults</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>relaxng-maven-plugin test project</name>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>info.alaperrot.maven</groupId>
+				<artifactId>relaxng-maven-plugin</artifactId>
+				<version>${project.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>translate</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<sourceIncludes>
+						<pattern>foo.*</pattern>
+					</sourceIncludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
